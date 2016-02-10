@@ -1,0 +1,192 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	text-align: center;
+}
+
+h1 {
+	text-transform: uppercase;
+}
+
+.game-board {
+	margin: 1em;
+}
+.game-board:after {
+	display: table;
+	content: '';
+	clear: both;
+}
+
+.game-board-moves {
+	width: 25%;
+	float: left;
+}
+
+.game-board-actions {
+	width: 50%;
+	float: left;
+}
+
+.game-board-score {
+	width: 25%;
+	float: left;
+}
+.game-board-score:after {
+	display: table;
+	content: '';
+	clear: both;
+}
+
+.user-move {
+	width: 95px;
+	height: 95px;
+	border: 2px solid #a1a1a1;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	background: #666;
+	color: #111;
+	margin: 0.75em auto;
+	outline: 0;
+	font-size: 16px;
+	text-transform: uppercase;
+	cursor: pointer;
+	display: block; 
+	clear: both;
+	background: #eee;
+}
+.user-move:hover {
+	background: #ccc;
+}
+.active-button {
+	background: #ccc;
+	box-shadow: 0 0 8px rgba(0,0,0,0.25) inset;
+}
+
+.game-actions {
+	display: inline-block;
+	margin: 0 auto;
+}
+.game-actions:after {
+	display: table;
+	content: '';
+	clear: both;
+}
+
+.action--result {}
+.result-output {
+	/*position: relative;
+	margin-top: 50%;
+	transform: translateY(-50%);*/
+	/*font-weight: bold;*/
+	font-size: 1.65em;
+	font-style: italic;
+}
+
+.player-hand {
+	width: 180px;
+	height: 180px;
+	margin: 2em;
+	float: left;
+}
+.player-action {
+	width: inherit;
+	height: inherit;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	/*transition: background-image 0.5s;*/
+}
+
+.action--user {
+	background-image: url(img/user-rock.png);
+  /*animation: shake 1.64s cubic-bezier(.36,.07,.19,.97) both infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;*/
+}
+.action--user.choice--rock {
+	background-image: url(img/user-rock.png);
+	animation-name: none;
+}
+.action--user.choice--paper {
+	background-image: url(img/user-paper.png);
+	animation-name: none;
+}
+.action--user.choice--scissor {
+	background-image: url(img/user-scissor.png);
+	animation-name: none;
+}
+
+.action--computer {
+	background-image: url(img/computer-rock.png);
+  /*animation: shake 1.64s cubic-bezier(.36,.07,.19,.97) both infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;*/
+}
+.action--computer.choice--rock {
+	background-image: url(img/computer-rock.png);
+	animation-name: none;
+}
+.action--computer.choice--paper {
+	background-image: url(img/computer-paper.png);
+	animation-name: none;
+}
+.action--computer.choice--scissor {
+	background-image: url(img/computer-scissor.png);
+	animation-name: none;
+}
+
+.player-action.shaking {
+	animation: shake 1.3s cubic-bezier(.36,.07,.19,.97) both infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+.player-action.action--user.shaking {
+	background-image: url(img/user-rock.png);
+}
+.player-action.action--computer.shaking {
+	background-image: url(img/computer-rock.png);
+}
+
+.player-score {
+	margin: 1em auto 1.5em;
+	background: #eee;
+	max-width: 150px;
+}
+
+.player-name {
+	font-size: 1.2em;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin: 0;
+	background: #a1a1a1;
+	color: #eee;
+	margin: 0 0 1em;
+	padding: 0.3em;
+}
+
+.player-score .score-count {
+	font-family: 'Orbitron', sans-serif;
+	font-size: 2.6em;
+	margin: 0.3625em 0;
+	color: #333;
+	padding: 0.25em 0 0.75em;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(0, -10px, 0);
+  }
+  20%, 80% {
+    transform: translate3d(0, 10px, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(0, -10px, 0);
+  }
+  40%, 60% {
+    transform: translate3d(0, 10px, 0);
+  }
+}

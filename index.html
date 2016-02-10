@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<title>Rocks, Paper, Scissors!</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Orbitron:500,400" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen">
+</head>
+<body>
+	<header class="game-title">
+		<h1>Rock, Paper, Scissor... Go!</h1>
+	</header><!-- .game-top -->
+
+	<section class="game-board">
+		<nav class="game-board-moves">
+			<h1 class="game-moves-header">Move</h1>
+			<button id="rock" onClick="playGame(this.id)" class="user-move move--rock">Rock</button>
+			<button id="paper" onClick="playGame(this.id)" class="user-move move--paper">Paper</button>
+			<button id="scissor" onClick="playGame(this.id)" class="user-move move--scissor">Scissor</button>
+			<!-- <button onClick="resetHands();waitSeconds(1000);removeShake();">Reset</button> -->
+		</nav>
+		<main class="game-board-actions">
+			<h1 id="roundCounter" class="game-board-header">Round 0</h1>
+			<div class="game-board-result">
+				<p id="roundResult" class="result-output">&nbsp;</p>
+			</div>
+			<div class="game-actions">
+				<div id="userHand" class="player-hand">
+					<div id="userMove" class="player-action action--user">&nbsp;</div>
+				</div>
+				<div id="computerHand" class="player-hand">
+					<div id="computerMove" class="player-action action--computer">&nbsp;</div>
+				</div>
+			</div>
+		</main>
+		<aside class="game-board-score">
+			<h1 class="game-score-header">Score</h1>
+			<section class="player-score score--user">
+				<h2 class="player-name">You</h2>
+				<div id="userScore" class="score-count">0</div>
+			</section>
+			<section class="player-score score--user">
+				<h2 class="player-name">Computer</h2>
+				<div id="computerScore" class="score-count">0</div>
+			</section>
+		</aside><!-- .game-bottom -->
+	</section><!-- .game-board -->
+	<footer>Built using Javascript by <a href="http://curren.me" target="_blank">Mike Curren</a>.</footer>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
